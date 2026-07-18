@@ -1,0 +1,15 @@
+# 临时文件
+*.tmp
+*.bak
+*.swp
+.DS_Store
+__pycache__/
+*.pyc
+
+# 编辑器
+.vscode/
+.idea/
+*.sublime-*
+
+# 系统
+Thumbs.db
