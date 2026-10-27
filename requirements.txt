@@ -1,0 +1,6 @@
+# vibe-need-judge 可运行骨架依赖
+# 最低可用：仅 openai（OpenAI 兼容 SDK）+ dotenv
+# 可选增强：langgraph（状态机编排）
+openai>=1.30.0
+python-dotenv>=1.0.0
+langgraph>=0.2.0
