@@ -7,10 +7,13 @@
 """
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 
-# 加载仓库根目录下的 .env（如存在）
-load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+# dotenv 为可选依赖：未安装时跳过 .env 加载，改用系统环境变量（Mock 模式仍可运行）
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+except ImportError:
+    pass
 
 # 仓库根目录（用于定位 references/ 角色卡等资源）
 REPO_ROOT = Path(__file__).resolve().parents[1]
